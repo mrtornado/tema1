@@ -35,7 +35,9 @@ class AdaugaStudent extends Component {
     const { nume, prenume, varsta, media } = this.state;
     const validat = this.validate();
 
-    if (validat && this.props.studCount < 9) {
+    if (this.props.studCount >= 9) {
+      return alert("No more then 9 students allowed");
+    } else if (validat) {
       this.props.handleAdaugaStudent(nume, prenume, varsta, media, key);
       this.setState({
         nume: "",
@@ -45,7 +47,6 @@ class AdaugaStudent extends Component {
         key: ""
       });
     }
-    console.log("No more then 9 students allowed");
   }
 
   validate() {
