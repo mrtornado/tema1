@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Table from "./components/Table";
 import AdaugaStudent from "./components/AdaugaStudent";
 
 var ID = function() {
@@ -78,15 +77,15 @@ class Grupa extends Component {
         : "desc";
       const sortedStudenti = this.state.studenti.sort((a, b) => {
         if (column === "nume") {
-          const nameA = a.nume.toUpperCase(); // ignore upper and lowercase
-          const nameB = b.nume.toUpperCase(); // ignore upper and lowercase
+          const nameA = a.nume.toUpperCase();
+          const nameB = b.nume.toUpperCase();
 
           if (nameA < nameB) return -1;
           if (nameA < nameB) return 1;
           else return 0;
         } else if (column === "prenume") {
-          const nameA = a.prenume.toUpperCase(); // ignore upper and lowercase
-          const nameB = b.prenume.toUpperCase(); // ignore upper and lowercase
+          const nameA = a.prenume.toUpperCase();
+          const nameB = b.prenume.toUpperCase();
 
           if (nameA < nameB) return -1;
           if (nameA < nameB) return 1;
